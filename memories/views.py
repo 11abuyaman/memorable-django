@@ -103,7 +103,7 @@ class AddMemoryAPI(views.APIView):
             body = request.POST.get('body')
             feeling = request.POST.get('feeling')
             locked = request.POST.get('locked')
-            members = request.POST.get('members')
+            members = request.POST.getlist('members')
             images = request.FILES.getlist('images')
 
             author_object = request.user
